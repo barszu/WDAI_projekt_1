@@ -63,6 +63,11 @@ aside {
     line-height: 24px;
 }
 
+.contact-data {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
 .only-bold {
     font-weight: 700;
 }
@@ -72,6 +77,10 @@ aside {
     margin-left: 0;
     padding: 0;
     list-style-position: inside;
+}
+
+.list-asside li {
+    margin-bottom: 12px;
 }
 
 .list-aside-item {
@@ -85,7 +94,7 @@ main {
     /* float: left; Dodane, aby umieścić main obok aside */
     padding-left: 80px;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     padding-right: 80px;
 }
 
@@ -140,10 +149,25 @@ main {
     margin-bottom: 50px;
 }
 
+.projects h4 {
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.projects ul {
+    padding: 5px;
+    list-style-position: inside;
+}
+
 .links {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 34px;
+    color: rgb(60, 60, 60);
+    text-decoration: none;
+}
+
+.github-link {
     color: rgb(60, 60, 60);
     text-decoration: none;
 }
@@ -181,15 +205,3 @@ main {
         width: 700px;
     }
 }
-/* 
-@media only screen and (max-width: 700px) and (orientation: portrait) {
-    .wrapper {
-        width: 700px;
-    }
-
-    .body {
-        background: #203a43;
-        background-size: auto;
-        background-position: auto;
-    }
-} */
