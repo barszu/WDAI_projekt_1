@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formularz</title>
+        <link href="style_formularz.css" rel="stylesheet" />
+        <link href="nav_style_all.css" rel="stylesheet" />
+        <!-- linki do czcionek -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src="./form_script.js"></script>
+    </head>
+    <body>
+        <!-- panel nawigacji -->
+        <header>
+            <h1 class="logo">Witaj na stronie FORM</h1>
+
+            <input type="checkbox" id="menu-bar" />
+            <label for="menu-bar">Menu</label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="formularz.html">FORM</a></li>
+                    <li><a href="projekt_1.html">C++</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            # todo formularz
+            <div class="container">
+                <form id="form" action="/">
+                    <h1>Skontaktuj się ze mną!</h1>
+                    <div class="input-control">
+                        <div class="tags">
+                            <label for="username">Twoje imie i nazwisko:</label>
+                        </div>
+
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            required
+                        />
+                        <div class="error"></div>
+                    </div>
+                    <div class="line-dist"></div>
+                    <div class="input-control">
+                        <div class="tags">
+                            <label for="email"
+                                ><div class="labels">Twój email:</div></label
+                            >
+                        </div>
+                        <input id="email" name="username" type="text" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="line-dist"></div>
+                    <div class="input-control">
+                        <div class="tags">
+                            <label for="subject">Temat maila:</label>
+                        </div>
+
+                        <input id="subject" name="subject" type="text" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="line-dist"></div>
+                    <div class="input-control">
+                        <div class="tags">
+                            <label for="email">Treść maila:</label>
+                        </div>
+
+                        <textarea
+                            id="text"
+                            name="text"
+                            rows="15"
+                            placeholder="Wprowadź treść maila"
+                        ></textarea>
+                        <div class="error"></div>
+                    </div>
+                    <div class="line-dist"></div>
+
+                    <button type="submit">ZATWIERDŹ I PRZEŚLIJ MAILA</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

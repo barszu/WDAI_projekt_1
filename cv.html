@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CV moje</title>
+        <link href="style_cv.css" rel="stylesheet" />
+        <link href="nav_style_all.css" rel="stylesheet" />
+        <!-- linki do czcionek -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- panel nawigacji -->
+        <header>
+            <h1 class="logo">Witaj na stronie CV</h1>
+
+            <input type="checkbox" id="menu-bar" />
+            <label for="menu-bar">Menu</label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="formularz.html">FORM</a></li>
+                    <li><a href="projekt_1.html">C++</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- do flexbox do ukladania layout -->
+        <div class="wrapper">
+            <main>
+                <!-- sekcja prawa głowna -->
+                <div class="main-description">
+                    <!-- I sekcja z danymi "o mnie"-->
+                    <h3>Student AGH WI kierunek Informatyka</h3>
+                    <h1 class="person-name">Bartłomiej Szubiak</h1>
+                    <p class="description">
+                        C is a general-purpose computer programming language. It
+                        was created in the 1970s by Dennis Ritchie, and remains
+                        very widely used and influential. By design, C's
+                        features cleanly reflect the capabilities of the
+                        targeted CPUs. It has found lasting use in operating
+                        systems, device drivers, and protocol stacks, but its
+                        use in application software has been decreasing.[7] C is
+                        commonly used on computer architectures that range from
+                    </p>
+                </div>
+                <!-- sekcja z github, projekty -->
+                <div class="projects">
+                    <h2>Projekty, github</h2>
+                    <p>#to do link na github</p>
+                    <h4>top projekty:</h4>
+                    <ul>
+                        <li>
+                            <a class="links" href="https://www.youtube.com/">
+                                PAN ADRZEJ I PAN BŁAŻEJ JADĄ SAMOCHODEM
+                                <span class="only-bold"> .....[JAVA] </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="links" href="https://www.youtube.com/">
+                                MOLIBDENOWY MATEUSZ
+                                <span class="only-bold"> .....[JAVA] </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="links" href="https://www.youtube.com/">
+                                TYTANOWY JANUSZ
+                                <span class="only-bold"> .....[JAVA] </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sekcja z workexperience-->
+                <div class="main-box">
+                    <h2>Work Experience</h2>
+                    <!-- I praca -->
+                    <div class="sec-section">
+                        <h3>pierwsza praca nazwa</h3>
+                        <p>kiedy pracowalem</p>
+                        <div class="left-padding">
+                            <ul class="description">
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sec-section">
+                        <h3>druga praca nazwa</h3>
+                        <p>kiedy pracowalem</p>
+                        <div class="left-padding">
+                            <ul class="description">
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- sekcja z edukacja-->
+                <div class="main-box">
+                    <h2>EDUKACJA</h2>
+                    <!-- I szkolka -->
+                    <div class="sec-section">
+                        <h3>pierwsza szkola</h3>
+                        <p>kiedy pracowalem</p>
+                        <div class="left-padding">
+                            <ul class="description">
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sec-section">
+                        <h3>druga szkola</h3>
+                        <p>kiedy pracowalem</p>
+                        <div class="left-padding">
+                            <ul class="description">
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sec-section">
+                        <h3>trzecia szkola</h3>
+                        <p>kiedy pracowalem</p>
+                        <div class="left-padding">
+                            <ul class="description">
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                                <li>bla bla</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <aside>
+                <!-- sekcja lewa pasek kontaktowy , osiagniecia-->
+                <img
+                    class="face-photo"
+                    src="facephoto.jpg"
+                    width="270"
+                    alt="Moje zdjecie z CV"
+                />
+                <!-- kontakty -->
+                <div class="header-aside">
+                    <h2>Kontakt</h2>
+                    <p>
+                        <span class="only-bold">tel: </span>
+                        <a class="contact-links" href="tel: 123456789"
+                            >123456789</a
+                        >
+                    </p>
+                    <p>
+                        <span class="only-bold">e-mail: </span>
+                        <a class="contact-links" href="mailto: abc@gmail.com "
+                            >bszub@gmail.com</a
+                        >
+                    </p>
+                </div>
+                <!-- umiejetnosci techniczne -->
+                <div class="header-aside">
+                    <h2>Tech skills</h2>
+                    <ul class="list-asside">
+                        <li><span class="list-aside-item">Python</span></li>
+                        <li><span class="list-aside-item">Java</span></li>
+                        <li><span class="list-aside-item">C</span></li>
+                        <li><span class="list-aside-item">HTML :)</span></li>
+                        <li><span class="list-aside-item">CSS :)</span></li>
+                        <li>
+                            <span class="list-aside-item">JavaScript :)</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- umiejetnosci miekkie -->
+                <div class="header-aside">
+                    <h2>"Soft" skills</h2>
+                    <ul class="list-asside">
+                        <li><span class="list-aside-item">abc</span></li>
+                        <li><span class="list-aside-item">abc</span></li>
+                        <li><span class="list-aside-item">abc</span></li>
+                        <li><span class="list-aside-item">abc</span></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </body>
+</html>
