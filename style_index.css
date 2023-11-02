@@ -7,15 +7,12 @@
 body {
     min-height: 100vh;
     font-family: "Montserrat", sans-serif;
-    /* background: rgb(94, 150, 131); */
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    /* background: url(szambiarze.jpg) no-repeat; */
     background-size: cover;
     background-position: center;
 }
 
 main {
-    /* margin-top: 80px; */
     margin: 100px auto 200px auto;
     width: 80vw;
     display: flex;
