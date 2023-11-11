@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Produktów</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- linki do czcionek -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>LISTA PRODUKTÓW</h1>
+    </nav>
+
+    <header>
+      <select id="sortSelect" onchange="sortProducts()">
+        <option value="null">Brak sortowania po nazwie</option>
+        <option value="asc">Sortuj rosnąco po nazwie</option>
+        <option value="desc">Sortuj malejąco po nazwie</option>
+      </select>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="wyszukaj po nazwie produktu"
+        oninput="searchProducts()"
+      />
+    </header>
+
+    <main id="main-box" class="product-list"></main>
+  </body>
+</html>

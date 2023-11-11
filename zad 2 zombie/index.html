@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>ZOMBIE</title>
+    <script src="global_variables.js"></script>
+    <script src="settings.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="main-box">
+      <header>
+        <!-- <div class="custom-cursor site-wide">
+          <div class="pointer"></div>
+        </div> -->
+        <img id="crosshair" src="images/aim.png" />
+        <script src="crosshair.js"></script>
+
+        <div id="heart-bar">
+          <div id="heart" class="heart-full"></div>
+          <div id="heart" class="heart-full"></div>
+          <div id="heart" class="heart-full"></div>
+        </div>
+        <h2 id="score">00000</h2>
+      </header>
+      <div id="death-page" class="death-page">
+        <h3>PRZEGRAŁEŚ!</h3>
+        <p>
+          Wynik:
+          <span id="score-span">xxxxx</span>
+          pkt
+        </p>
+        <button id="reload-button">
+          <span>Zagraj ponownie!</span>
+        </button>
+      </div>
+      <div id="playground">
+        <script src="game_engine.js"></script>
+        <script src="score.js"></script>
+        <script src="zombie.js"></script>
+        <script src="lives.js"></script>
+      </div>
+    </main>
+  </body>
+</html>
