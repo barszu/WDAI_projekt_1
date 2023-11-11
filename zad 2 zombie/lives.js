@@ -5,11 +5,9 @@ function addToheartBar() {
   heartBar.innerHTML = "";
 
   for (let i = 1; i <= SETINGS_maxLives; i++) {
-    //zobacz jak dzialaja zwykle petle w js
     var heart = document.createElement("div");
     heartBar.appendChild(heart);
     heart.id = "heart";
-    // heart.setAttribute("id", "heart");
 
     if (i <= GLOBAL_lives) {
       heart.classList.add("heart-full");

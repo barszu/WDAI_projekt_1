@@ -1,8 +1,0 @@
-//jest bug zabity zombie jest dalej trakowany przez funkcje spawn zombie
-//tak jakby istnieje dalej chodz nie ma go w html <done!!!!!!!
-
-
-5. okno zakonczenia gry
-
-
-5. powieksz celownik przy strzale

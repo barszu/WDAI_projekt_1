@@ -13,7 +13,7 @@ fetch("https://dummyjson.com/products")
   })
   //obsluga bledow
   .catch(function (err) {
-    console.log("Błąd: " + err);
+    console.log("Błąd strumienia danych: " + err);
   });
 
 function addToMain(productList) {

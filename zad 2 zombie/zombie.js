@@ -1,5 +1,3 @@
-// const playground = document.getElementById("playground");
-
 function spawnZombie() {
   const zombie = document.createElement("div");
   playground.appendChild(zombie);
@@ -19,7 +17,7 @@ function spawnZombie() {
 
   function moveZombie() {
     const pos = parseFloat(zombie.style.left) || 0;
-    const newPos = pos - speed; // Przesunięcie o 1px (zmień to na szybkość poruszania się zombie)
+    const newPos = pos - speed;
 
     if (!document.contains(zombie)) {
       return;

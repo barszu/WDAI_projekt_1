@@ -13,5 +13,6 @@ const SETINGS_minPointsToPlay = 0;
 const SETINGS_minZombieSpeed = 1;
 const SETINGS_maxZombieSpeed = 5;
 
+//for zombie scale
 const SETINGS_minZombieScale = 0.5;
 const SETINGS_maxZombieScale = 1.1;

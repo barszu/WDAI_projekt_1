@@ -2,17 +2,15 @@ var kernelID;
 const mainBox = document.getElementById("main-box");
 
 document.addEventListener("DOMContentLoaded", function () {
-  //if pages loads game started bootstrap page
+  //if pages loaded -> bootstrap game
   initGame();
-  kernelID = setInterval(kernel, SETINGS_kernelRefreshTime);
+  kernelID = setInterval(kernel, SETINGS_kernelRefreshTime); //w glowna petla while True
 });
 
-//w glowna petla while True
 function kernel() {
   checkGame();
 
   if (!GLOBAL_isGameRunning) {
-    // console.log("zatrzymywanie...");
     clearInterval(kernelID);
     mainBox.removeEventListener("click", trackClick);
     stopZombies();
@@ -27,10 +25,7 @@ function checkGame() {
   if (!(possitiveScore() && GLOBAL_lives > 0)) {
     GLOBAL_isGameRunning = false;
     GLOBAL_gameScore = 0;
-
-    // console.log("checkgame -> stop <0 points");
   }
-  // if (hearts <= 0 )
 }
 
 function initGame() {
@@ -43,7 +38,7 @@ function initGame() {
 
 function trackClick(event) {
   const crosshair = document.getElementById("crosshair");
-  // crosshair.classList.toggle("crosshair-animate");
+
   crosshair.style.animation = "none";
   void crosshair.offsetWidth;
   crosshair.style.animation = "powiekszanie 0.2s forwards";
@@ -56,17 +51,11 @@ function trackClick(event) {
     console.log("Kliknięto na tło!");
     addToScore(SETINGS_missedShot);
   }
-  // const x = event.clientX;
-  // const y = event.clientY;
-  // console.log("Współrzędne kliknięcia: X=" + x + ", Y=" + y);
-  // crosshair.classList.remove("crosshair-animate");
 }
 
 function stopZombies() {
-  // wywal animacje z zombie.js ? usun wszystkie zombie
   const zombieElements = document.querySelectorAll("[id='zombie']");
 
-  // Iteracja po znalezionych elementach i usuwanie ich
   zombieElements.forEach((zombie) => {
     zombie.remove();
   });
