@@ -3,7 +3,7 @@ import { ProductList } from "../components/ProductList";
 
 import "../styles/productPage.css";
 
-const ProductPage = () => {
+const FancyProductPage = () => {
     const [fetchedList, setFetchedList] = useState(null);
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -47,7 +47,7 @@ const ProductPage = () => {
 
     return (
         <article>
-            <h1>This is Products List Page</h1>;
+            <h1>This is FANCY Products List Page</h1>;
 
             <select id="sortSelect" onChange={(e) => setSortOption(e.target.value)}>
                 <option value="null">Brak sortowania po nazwie</option>
@@ -64,7 +64,7 @@ const ProductPage = () => {
             />
             {fetchedList && <ProductList list={fetchedList} />}
         </article>
-        )
+    )
 };
 
-export default ProductPage;
+export default FancyProductPage;

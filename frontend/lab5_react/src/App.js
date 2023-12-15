@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductPage from './pages/ProductPage';
 import Home from './pages/Home';
 import Navigation from './Navigation';
+import FancyProductPage from "./pages/FancyProductPage";
 
 
 
@@ -15,7 +16,7 @@ const App = () => {
                 <Route path="/" element={<Navigation />}>
                     <Route index element={<Home />} />
                     <Route path="products" element={<ProductPage />} />
-                    {/*<Route path="contact" element={<Contact />} />*/}
+                    <Route path="fancyProducts" element={<FancyProductPage />} />
                     {/*<Route path="*" element={<NoPage />} />*/}
                 </Route>
             </Routes>
