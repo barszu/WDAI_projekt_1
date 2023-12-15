@@ -1,0 +1,64 @@
+.header-nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: gainsboro;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.header-nav .logo {
+  font-weight: bolder;
+  font-size: 25px;
+  color: #333;
+  padding-left: 2%;
+}
+
+.header-nav .navbar ul {
+  list-style: none;
+}
+
+.header-nav .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.header-nav .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+
+.header-nav .navbar ul li :hover {
+  background: #333;
+  color: bisque;
+}
+
+.header-nav .navbar ul li a.active {
+  background: #333;
+  color: bisque;
+}
+
+#menu-bar {
+  display: none;
+}
+
+.header-nav label {
+  font-size: 20px;
+  color: #333;
+  display: none;
+}
+
+.nav-brake {
+  /*height: 200px;*/
+  display: block;
+  margin-top: 100px;
+}

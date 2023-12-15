@@ -34,3 +34,4 @@ def protected():
 
 if __name__ == '__main__':
     app.run()
+# RUN VIA: python -m flask run

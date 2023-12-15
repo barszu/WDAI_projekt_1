@@ -8,19 +8,14 @@ body {
   margin: 0;
   padding: 0;
   background-color: beige;
-  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
-  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
-  /*  sans-serif;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-article {
+article , .page-container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
@@ -31,6 +26,37 @@ article {
   margin: 40px;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*line-height: 1.2em;*/
 }
 
+/*.page-container {*/
+/*  padding: 16px;*/
+/*}*/
 
+.input,
+.select {
+  padding: 8px;
+  min-width: 220px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 8px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+img {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.773);
+  margin-bottom: 10px;
+}

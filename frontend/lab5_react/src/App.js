@@ -1,27 +1,29 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import ProductPage from './pages/ProductPage';
-import Home from './pages/Home';
-import Navigation from './Navigation';
-import FancyProductPage from "./pages/FancyProductPage";
-
-
-
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import NotFoundPage from "./pages/NotFoundPage";
+import ProductsPage from "./pages/ProductsPage";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import ProductEditPage from "./pages/ProductEditPage";
+import ProtectedPage from "./pages/ProtectedPage";
+import Menu from "./Menu";
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Navigation />}>
-                    <Route index element={<Home />} />
-                    <Route path="products" element={<ProductPage />} />
-                    <Route path="fancyProducts" element={<FancyProductPage />} />
-                    {/*<Route path="*" element={<NoPage />} />*/}
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Menu />}>
+          <Route index element={<HomePage />} />
+          <Route path="products" element={<ProductsPage />} />
+          <Route path="product/edit/:productId" element={<ProductEditPage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="protected" element={<ProtectedPage />} />
+          <Route path="/404" element={<NotFoundPage />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;
