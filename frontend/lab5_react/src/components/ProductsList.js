@@ -1,5 +1,7 @@
 import ProductCard from "./ProductCard";
 
+// wylistowanie produktów
+
 const ProductsList = ({ list }) => {
   return (
     <ul className="list-class">

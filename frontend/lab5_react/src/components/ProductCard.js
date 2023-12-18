@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+// wyglad produktu , z mozliwoscia edycji
+
 const ProductCard = ({ id, title, description, price, thumbnail }) => {
   const productEditUrl = `/product/edit/${id}`;
 

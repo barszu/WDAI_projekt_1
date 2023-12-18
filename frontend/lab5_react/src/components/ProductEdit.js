@@ -1,36 +1,45 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 
+//strona do edycji 'x' produktu
+
 const ProductEdit = ({ details, setNewDetails }) => {
-  const [values, setValues] = useState({});
+  const [values, setValues] = useState({}); //wartosci pol formularza
 
-  const [validation, setValidation] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [validation, setValidation] = useState(false); //czy przeszlo walidacje?
+  const [loading, setLoading] = useState(false); // czy laduje sie?
 
+  //aktualizacja wartosci pol formularza po zmianie wartości w polu formularza.
   const onChangeHandler = (value, key) => {
     setValues({ ...values, [key]: value });
   };
 
+  //aktuazlizacja produktu po kliknieciu w przycisk, ze sprawdzeniem
   const onClickHandler = () => {
+    // Ustawienie na start stanu 'validation' na false
     setValidation(false);
 
+    // Sprawdzenie, czy obiekt 'values' istnieje i ma jakieś klucze
+    // oraz czy któraś z wartości w obiekcie 'values' ma długość równą zero
     if (
       !!Object.keys(values)?.length &&
       Object.values(values)
         ?.map((item) => !String(item)?.length)
         .includes(true)
-    ) {
-      setValidation(true);
-    } else {
-      setLoading(true);
-      setNewDetails(values);
-      setTimeout(() => {
+    )
+      {
+        //jest okej wiec ustawiamy validation na true
+        setValidation(true);
+      }
+      else { //'values nie istnieje lub nie ma kluczy lub któreś z wartości ma długość równą zero'
+        setLoading(true);
+        setNewDetails(values);
         setLoading(false);
-      }, 2000);
-    }
+      }
   };
 
   useEffect(() => {
+    //przy kazdej zmianie 'details' ustaw wartosci pol formularza na 'details'
     setValues(details);
   }, [details]);
 
@@ -38,10 +47,10 @@ const ProductEdit = ({ details, setNewDetails }) => {
     <>
       {!!Object.keys(values).length ? (
         <div className="product">
-          <h3>Product id: {values?.id}</h3>
-          <h3>Title</h3>
+          <h3>ID produktu: {values?.id}</h3>
+          <h3>Nazwa:</h3>
           {!String(values?.title)?.length && validation && (
-            <p className="error">This field is required</p>
+            <p className="error">Musisz uzupelnic to pole!</p>
           )}
           <input
             disabled={loading}
@@ -52,9 +61,9 @@ const ProductEdit = ({ details, setNewDetails }) => {
             onChange={(e) => onChangeHandler(e.target.value, "title")}
           />
 
-          <h3>Description</h3>
+          <h3>Opis:</h3>
           {!String(values?.description)?.length && validation && (
-            <p className="error">This field is required</p>
+            <p className="error">Musisz uzupelnic to pole!</p>
           )}
           <textarea
             disabled={loading}
@@ -67,9 +76,9 @@ const ProductEdit = ({ details, setNewDetails }) => {
             }
           />
 
-          <h3>Price</h3>
+          <h3>Cena:</h3>
           {!String(values?.price)?.length && validation && (
-            <p className="error">This field is required</p>
+            <p className="error">Musisz uzupelnic to pole!</p>
           )}
           <input
             disabled={loading}
@@ -85,11 +94,13 @@ const ProductEdit = ({ details, setNewDetails }) => {
             onClick={() => onClickHandler()}
             className="button"
           >
-            Update product
+            Update!
           </button>
         </div>
-      ) : (
-        <h3>Empty data</h3>
+      )
+          // kiedy nic nie ma
+          : (
+        <h3>Nie ma takiego albo sie laduje jeszcze</h3>
       )}
     </>
   );

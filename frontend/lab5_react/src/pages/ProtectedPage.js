@@ -35,16 +35,18 @@ const ProtectedPage = () => {
 
   return (
     <div className="page-container">
-      <h1>Protected Page</h1>
+      <h1>Protected</h1>
       {loading ? (
-        <div>Loading...</div>
+        <div>Ladowanie...</div>
       ) : (
         <>
           {auth ? (
             <>
-              <h2>You can see protected view</h2>
+              <h2>Masz dostep do super hiper tajnej strony!</h2>
+              <h1>UDALO CI SIE!</h1>
+              <br/>
               <img src="/images/sarnie_zniwo.png" alt="Pan Andrzej i Pan Blazej" />
-              <h3>Current user: {loggedInAs}</h3>
+              <h3>Uzytkownik: {loggedInAs}</h3>
               <button
                 onClick={() => {
                   setAuth(false);
@@ -52,13 +54,14 @@ const ProtectedPage = () => {
                 }}
                 className="button"
               >
-                Logout
+                Wyloguj!
               </button>
             </>
           ) : (
             <>
-              <h2>You are not logged in!</h2>
-              <Link to="/login">Login</Link>
+              <h2>Nie no nie jestes zalogowany to nie mozesz tego widziec</h2>
+              <h1>Musisz sie zalogowac!</h1>
+              <Link to="/login">idz i sie zaloguj!</Link>
             </>
           )}
         </>

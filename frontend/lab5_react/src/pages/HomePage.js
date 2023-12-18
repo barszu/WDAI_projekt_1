@@ -1,5 +1,7 @@
 import "../styles/main.css";
 
+//strona powitalna
+
 const HomePage = () => {
   return (
     <div className="page-container">

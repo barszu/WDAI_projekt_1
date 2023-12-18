@@ -1,6 +1,8 @@
 import { Outlet, NavLink } from "react-router-dom";
 import "./styles/menu.css";
 
+//pasek nawigacji
+
 const Menu = () => {
   return (
     <>

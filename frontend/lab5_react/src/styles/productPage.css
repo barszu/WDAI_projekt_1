@@ -1,6 +1,6 @@
 .product {
   width: 300px;
-  height: 400px;
+  height: 500px;
   border: 2px solid rgba(62, 106, 238, 0.773);
   border-radius: 10px;
   margin: 20px 10px 20px 10px;
@@ -14,7 +14,7 @@
 
 .product img {
   width: 80%;
-  height: 40%;
+  height: 30%;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.773);
   margin-bottom: 10px;

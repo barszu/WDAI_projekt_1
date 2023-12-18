@@ -8,6 +8,7 @@ import ProductEditPage from "./pages/ProductEditPage";
 import ProtectedPage from "./pages/ProtectedPage";
 import Menu from "./Menu";
 
+// tylko routery do stron
 const App = () => {
   return (
     <BrowserRouter>

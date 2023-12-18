@@ -25,22 +25,25 @@ const ProductsPage = () => {
           localStorage.getItem("updatedProduct")
         );
 
+        //dla kazdego obj z productsList
         const newProductsList = productsList.map((obj) => {
-          if (Number(obj.id) === Number(updatedProduct.id)) {
-            return { ...obj, ...updatedProduct };
+          if (Number(obj.id) === Number(updatedProduct.id)) { //madre porownywanie dla id
+            return { ...obj, ...updatedProduct }; //nowy obiekt sklejka tych dwoch
           }
 
-          return obj;
+          return obj; //zostaw nieruszony
         });
 
         localStorage.removeItem("updatedProduct");
         setLists(newProductsList);
         localStorage.setItem("productsList", JSON.stringify(newProductsList));
-      } else {
+      }
+      else {
         setLists(productsList);
         localStorage.setItem("productsList", JSON.stringify(productsList));
       }
-    } else {
+    }
+    else { //zaciagnij dane
       const query = await api.ApiCall({ url: "products" });
       if (query) {
         setLists(query?.products);
@@ -50,6 +53,7 @@ const ProductsPage = () => {
   };
 
   useEffect(() => {
+    //przy starcie wez liste
     getList();
   }, []);
 
@@ -81,7 +85,7 @@ const ProductsPage = () => {
 
   return (
     <div className="page-container">
-      <h1>Products List Page</h1>
+      <h1>Strona z produktami</h1>
       <select
         id="sortSelect"
         className="select"

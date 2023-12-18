@@ -1,6 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from "axios";
 
+//opakowanie do obslugi zadan HTTP za pomoca Axios
+
 class Api {
   service;
 

@@ -5,6 +5,8 @@ from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
 
+PASSWORD = "Andrzej"
+USER_NAME = "Andrzej"
 
 app = Flask(__name__)
 CORS(app)
@@ -16,7 +18,7 @@ jwt = JWTManager(app)
 def login():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
-    if username != "test" or password != "test":
+    if username != USER_NAME or password != PASSWORD:
         return jsonify({"msg": "Bad username or password"}), 401
 
     access_token = create_access_token(identity=username)
